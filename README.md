@@ -1,6 +1,4 @@
 # GPU Info
-|torch.cuda.is_available():| True|
-|torch.cuda.current_device():| 0|
 |device number|device name|
 |---|---|
 |0|NVIDIA GeForce RTX 3090|
