@@ -2,6 +2,12 @@
 Designed as a speed test for pretrained models in pytorch.
 
 # usage
+activate conda env:
+```bash
+conda activate speed_test_env
+```
+
+help message:
 ```bash
 python pretrained_speed_test.py --help
 ```
