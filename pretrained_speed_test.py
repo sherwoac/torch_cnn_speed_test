@@ -7,7 +7,6 @@ import torchvision.models
 import multiprocessing
 
 exclude_models = ['mnasnet1_3', 'mnasnet0_75']
-number_of_batches = 10
 
 
 def get_gpu_name(device_number):
@@ -104,6 +103,6 @@ if __name__ == "__main__":
     f.write('|---|---|---|---|\n')
     for (model_name, batch_size, _), model_elapsed_time in elapsed_times_model_batch_size.items():
         if model_elapsed_time:
-            f.write(f'|{batch_size}|{model_name}|{model_elapsed_time:.1f}|{int((batch_size * number_of_batches) / model_elapsed_time):,}|\n')
+            f.write(f'|{batch_size}|{model_name}|{model_elapsed_time:.1f}|{int((batch_size * args["number_of_batches"]) / model_elapsed_time):,}|\n')
 
     f.close()
